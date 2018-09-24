@@ -67,16 +67,25 @@
         android:layout_height="70dp"
         android:layout_alignTop="@+id/button8"
         android:layout_toEndOf="@+id/button8"
-        android:text="9" />
+        android:text="9"
+        android:layout_toRightOf="@+id/button8" />
+
+    <Button
+        android:id="@+id/buttonEquals"
+        android:layout_width="262dp"
+        android:layout_height="70dp"
+        android:layout_below="@+id/buttonPowerOf"
+        android:layout_centerHorizontal="true"
+        android:text="=" />
 
     <Button
         android:id="@+id/button0"
         android:layout_width="140dp"
         android:layout_height="70dp"
+        android:layout_alignLeft="@+id/button8"
         android:layout_alignStart="@+id/button8"
         android:layout_alignTop="@+id/buttonDecimal"
-        android:text="0"
-        android:layout_alignLeft="@+id/button8" />
+        android:text="0" />
 
     <Button
         android:id="@+id/button2"
@@ -141,7 +150,9 @@
         android:text="6"
         android:layout_toRightOf="@+id/button8" />
 
+
     <TextView
+        android:singleLine="true"
         android:id="@+id/textView"
         android:layout_width="275dp"
         android:layout_height="80dp"
@@ -149,13 +160,10 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
         android:gravity="right"
-        android:text="1.0"
+        android:text="0"
         android:textSize="50sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.112" />
+        android:scrollHorizontally="true" />
+
 
     <Button
         android:id="@+id/button8"
@@ -173,6 +181,7 @@
         android:layout_alignParentTop="true"
         android:layout_alignStart="@+id/textView"
         android:layout_marginTop="154dp"
-        android:text="7" />
+        android:text="7"
+        android:layout_alignLeft="@+id/textView" />
 
 </RelativeLayout>
