@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     Boolean decimalUsed = false;
     Boolean operatorPressed = false;
     Boolean equalsPressed = false;
+    Boolean afterNumber = false;
     double firstNumber, secondNumber;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,8 +56,15 @@ public class MainActivity extends AppCompatActivity {
                 }
                  else{
                     if(addPressed||subtractPressed||multiplyPressed||dividePressed||powerOfPressed) {
-                        textView1.setText("0");
-                        operatorPressed = true;
+                        if(afterNumber) {
+                            String currentText = textView1.getText().toString().trim();
+                            textView1.setText(currentText + "0");
+                        }
+                        else {
+                            textView1.setText("0");
+                            operatorPressed = true;
+                            afterNumber = true;
+                        }
                     }
                     else{
                         if (textView1.getText().toString().trim().equals("0")) {
@@ -78,8 +86,15 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else{
                     if(addPressed||subtractPressed||multiplyPressed||dividePressed||powerOfPressed) {
-                        textView1.setText("1");
-                        operatorPressed = true;
+                        if(afterNumber) {
+                            String currentText = textView1.getText().toString().trim();
+                            textView1.setText(currentText + "1");
+                        }
+                        else {
+                            textView1.setText("1");
+                            operatorPressed = true;
+                            afterNumber = true;
+                        }
                     }
                     else {
                         if (textView1.getText().toString().trim().equals("0")) {
@@ -102,8 +117,15 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else{
                     if(addPressed||subtractPressed||multiplyPressed||dividePressed||powerOfPressed) {
-                        textView1.setText("2");
-                        operatorPressed = true;
+                        if(afterNumber) {
+                            String currentText = textView1.getText().toString().trim();
+                            textView1.setText(currentText + "2");
+                        }
+                        else {
+                            textView1.setText("2");
+                            operatorPressed = true;
+                            afterNumber = true;
+                        }
                     }
                     else {
                         if (textView1.getText().toString().trim().equals("0")) {
@@ -126,8 +148,15 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else{
                     if(addPressed||subtractPressed||multiplyPressed||dividePressed||powerOfPressed) {
-                        textView1.setText("3");
-                        operatorPressed = true;
+                        if(afterNumber) {
+                            String currentText = textView1.getText().toString().trim();
+                            textView1.setText(currentText + "3");
+                        }
+                        else {
+                            textView1.setText("3");
+                            operatorPressed = true;
+                            afterNumber = true;
+                        }
                     }
                     else {
                         if (textView1.getText().toString().trim().equals("0")) {
@@ -150,8 +179,14 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else{
                     if(addPressed||subtractPressed||multiplyPressed||dividePressed||powerOfPressed) {
-                        textView1.setText("4");
-                        operatorPressed = true;
+                        if (afterNumber) {
+                            String currentText = textView1.getText().toString().trim();
+                            textView1.setText(currentText + "4");
+                        } else {
+                            textView1.setText("4");
+                            operatorPressed = true;
+                            afterNumber = true;
+                        }
                     }
                     else {
                         if (textView1.getText().toString().trim().equals("0")) {
@@ -174,8 +209,15 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else{
                     if(addPressed||subtractPressed||multiplyPressed||dividePressed||powerOfPressed) {
-                        textView1.setText("5");
-                        operatorPressed = true;
+                        if(afterNumber) {
+                            String currentText = textView1.getText().toString().trim();
+                            textView1.setText(currentText + "5");
+                        }
+                        else {
+                            textView1.setText("5");
+                            operatorPressed = true;
+                            afterNumber = true;
+                        }
                     }
                     else {
                         if (textView1.getText().toString().trim().equals("0")) {
@@ -198,8 +240,15 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else{
                     if(addPressed||subtractPressed||multiplyPressed||dividePressed||powerOfPressed) {
-                        textView1.setText("6");
-                        operatorPressed = true;
+                        if(afterNumber) {
+                            String currentText = textView1.getText().toString().trim();
+                            textView1.setText(currentText + "6");
+                        }
+                        else {
+                            textView1.setText("6");
+                            operatorPressed = true;
+                            afterNumber = true;
+                        }
                     }
                     else {
                         if (textView1.getText().toString().trim().equals("0")) {
@@ -222,8 +271,15 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else{
                     if(addPressed||subtractPressed||multiplyPressed||dividePressed||powerOfPressed) {
-                        textView1.setText("7");
-                        operatorPressed = true;
+                        if(afterNumber) {
+                            String currentText = textView1.getText().toString().trim();
+                            textView1.setText(currentText + "7");
+                        }
+                        else {
+                            textView1.setText("7");
+                            operatorPressed = true;
+                            afterNumber = true;
+                        }
                     }
                     else {
                         if (textView1.getText().toString().trim().equals("0")) {
@@ -246,8 +302,15 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else{
                     if(addPressed||subtractPressed||multiplyPressed||dividePressed||powerOfPressed) {
-                        textView1.setText("8");
-                        operatorPressed = true;
+                        if(afterNumber) {
+                            String currentText = textView1.getText().toString().trim();
+                            textView1.setText(currentText + "8");
+                        }
+                        else {
+                            textView1.setText("8");
+                            operatorPressed = true;
+                            afterNumber = true;
+                        }
                     }
                     else {
                         if (textView1.getText().toString().trim().equals("0")) {
@@ -270,8 +333,15 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else{
                     if(addPressed||subtractPressed||multiplyPressed||dividePressed||powerOfPressed) {
-                        textView1.setText("9");
-                        operatorPressed = true;
+                        if(afterNumber) {
+                            String currentText = textView1.getText().toString().trim();
+                            textView1.setText(currentText + "9");
+                        }
+                        else {
+                            textView1.setText("9");
+                            operatorPressed = true;
+                            afterNumber = true;
+                        }
                     }
                     else {
                         if (textView1.getText().toString().trim().equals("0")) {
@@ -288,12 +358,25 @@ public class MainActivity extends AppCompatActivity {
         buttonDecimal.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                if (!decimalUsed) {
-                    if (operatorPressed) {
-                        textView1.setText(".");
-                        operatorPressed = false;
-                        decimalUsed = true;
-                    } else {
+                if(equalsPressed) {
+                    textView1.setText(".");
+                    equalsPressed = false;
+                }
+                else{
+                    if(addPressed||subtractPressed||multiplyPressed||dividePressed||powerOfPressed) {
+                        if(afterNumber) {
+                            String currentText = textView1.getText().toString().trim();
+                            textView1.setText(currentText + ".");
+                            decimalUsed = true;
+                        }
+                        else {
+                            textView1.setText(".");
+                            operatorPressed = true;
+                            afterNumber = true;
+                            decimalUsed = true;
+                        }
+                    }
+                    else {
                         if (textView1.getText().toString().trim().equals("0")) {
                             textView1.setText(".");
                             decimalUsed = true;
@@ -318,25 +401,36 @@ public class MainActivity extends AppCompatActivity {
                         if(addPressed){
                             firstNumber = firstNumber + secondNumber;
                             addPressed = false;
+                            operatorPressed = false;
+                            decimalUsed = false;
                         }
                         else if(subtractPressed) {
                             firstNumber = firstNumber - secondNumber;
                             subtractPressed = false;
+                            operatorPressed = false;
+                            decimalUsed = false;
                         }
                         else if(multiplyPressed) {
                             firstNumber = firstNumber * secondNumber;
                             multiplyPressed = false;
+                            operatorPressed = false;
+                            decimalUsed = false;
                         }
                         else if(dividePressed){
                             firstNumber = firstNumber/secondNumber;
                             dividePressed = false;
+                            operatorPressed = false;
+                            decimalUsed = false;
                         }
                         else if(powerOfPressed){
                             firstNumber = Math.pow(firstNumber, secondNumber);
                             powerOfPressed = false;
+                            operatorPressed = false;
+                            decimalUsed = false;
                         }
                         textView1.setText(String.valueOf(firstNumber));
                         addPressed=true;
+                        afterNumber=false;
                     }
                     else{
                         String currentText = textView1.getText().toString().trim();
@@ -346,6 +440,7 @@ public class MainActivity extends AppCompatActivity {
                         multiplyPressed = false;
                         dividePressed = false;
                         powerOfPressed = false;
+                        decimalUsed = false;
                     }
                 }
             }
@@ -362,25 +457,33 @@ public class MainActivity extends AppCompatActivity {
                         if(addPressed){
                             firstNumber = firstNumber + secondNumber;
                             addPressed = false;
+                            operatorPressed = false;
                         }
                         else if(subtractPressed) {
                             firstNumber = firstNumber - secondNumber;
                             subtractPressed = false;
+                            operatorPressed = false;
                         }
                         else if(multiplyPressed) {
                             firstNumber = firstNumber * secondNumber;
                             multiplyPressed = false;
+                            operatorPressed = false;
                         }
                         else if(dividePressed){
                             firstNumber = firstNumber/secondNumber;
                             dividePressed = false;
+                            operatorPressed = false;
                         }
                         else if(powerOfPressed){
                             firstNumber = Math.pow(firstNumber, secondNumber);
                             powerOfPressed = false;
+                            operatorPressed = false;
                         }
                         textView1.setText(String.valueOf(firstNumber));
                         subtractPressed=true;
+                        afterNumber=false;
+                        decimalUsed = false;
+
                     }
                     else{
                         String currentText = textView1.getText().toString().trim();
@@ -390,6 +493,7 @@ public class MainActivity extends AppCompatActivity {
                         multiplyPressed = false;
                         dividePressed = false;
                         powerOfPressed = false;
+                        decimalUsed = false;
                     }
                 }
             }
@@ -406,25 +510,32 @@ public class MainActivity extends AppCompatActivity {
                         if(addPressed){
                             firstNumber = firstNumber + secondNumber;
                             addPressed = false;
+                            operatorPressed = false;
                         }
                         else if(subtractPressed) {
                             firstNumber = firstNumber - secondNumber;
                             subtractPressed = false;
+                            operatorPressed = false;
                         }
                         else if(multiplyPressed) {
                             firstNumber = firstNumber * secondNumber;
                             multiplyPressed = false;
+                            operatorPressed = false;
                         }
                         else if(dividePressed){
                             firstNumber = firstNumber/secondNumber;
                             dividePressed = false;
+                            operatorPressed = false;
                         }
                         else if(powerOfPressed){
                             firstNumber = Math.pow(firstNumber, secondNumber);
                             powerOfPressed = false;
+                            operatorPressed = false;
                         }
                         textView1.setText(String.valueOf(firstNumber));
                         multiplyPressed=true;
+                        afterNumber=false;
+                        decimalUsed = false;
                     }
                     else{
                         String currentText = textView1.getText().toString().trim();
@@ -434,6 +545,7 @@ public class MainActivity extends AppCompatActivity {
                         multiplyPressed = true;
                         dividePressed = false;
                         powerOfPressed = false;
+                        decimalUsed = false;
                     }
                 }
             }
@@ -449,21 +561,32 @@ public class MainActivity extends AppCompatActivity {
                         if (addPressed) {
                             firstNumber = firstNumber + secondNumber;
                             addPressed = false;
+                            operatorPressed = false;
+                            decimalUsed = false;
                         } else if (subtractPressed) {
                             firstNumber = firstNumber - secondNumber;
                             subtractPressed = false;
+                            operatorPressed = false;
+                            decimalUsed = false;
                         } else if (multiplyPressed) {
                             firstNumber = firstNumber * secondNumber;
                             multiplyPressed = false;
+                            operatorPressed = false;
+                            decimalUsed = false;
                         } else if (dividePressed) {
                             firstNumber = firstNumber / secondNumber;
                             dividePressed = false;
+                            operatorPressed = false;
+                            decimalUsed = false;
                         } else if (powerOfPressed) {
                             firstNumber = Math.pow(firstNumber, secondNumber);
                             powerOfPressed = false;
+                            operatorPressed = false;
+                            decimalUsed = false;
                         }
                         textView1.setText(String.valueOf(firstNumber));
                         dividePressed = true;
+                        afterNumber=false;
                     } else {
                         String currentText = textView1.getText().toString().trim();
                         firstNumber = Double.parseDouble(currentText);
@@ -472,6 +595,7 @@ public class MainActivity extends AppCompatActivity {
                         multiplyPressed = false;
                         dividePressed = true;
                         powerOfPressed = false;
+                        decimalUsed = false;
                     }
                 }
             }
@@ -488,25 +612,32 @@ public class MainActivity extends AppCompatActivity {
                         if(addPressed){
                             firstNumber = firstNumber + secondNumber;
                             addPressed = false;
+                            operatorPressed = false;
                         }
                         else if(subtractPressed) {
                             firstNumber = firstNumber - secondNumber;
                             subtractPressed = false;
+                            operatorPressed = false;
                         }
                         else if(multiplyPressed) {
                             firstNumber = firstNumber * secondNumber;
                             multiplyPressed = false;
+                            operatorPressed = false;
                         }
                         else if(dividePressed){
                             firstNumber = firstNumber/secondNumber;
                             dividePressed = false;
+                            operatorPressed = false;
                         }
                         else if(powerOfPressed){
                             firstNumber = Math.pow(firstNumber, secondNumber);
                             powerOfPressed = false;
+                            operatorPressed = false;
                         }
                         textView1.setText(String.valueOf(firstNumber));
                         powerOfPressed=true;
+                        afterNumber=false;
+                        decimalUsed = false;
                     }
                     else{
                         String currentText = textView1.getText().toString().trim();
@@ -515,6 +646,7 @@ public class MainActivity extends AppCompatActivity {
                         subtractPressed = false;
                         multiplyPressed = false;
                         dividePressed = false;
+                        decimalUsed = false;
                         powerOfPressed = true;
                     }
                 }
@@ -524,12 +656,15 @@ public class MainActivity extends AppCompatActivity {
         buttonNegate.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                if(operatorPressed)
+                Boolean negated;
+                String currentText = textView1.getText().toString().trim();
+                if(!(currentText.charAt(0)=='-'))
                 {
-
+                    textView1.setText("-" + currentText);
                 }
                 else{
-
+                    textView1.setText(currentText.substring(1));
+                    negated = false;
                 }
             }
         });
@@ -564,9 +699,11 @@ public class MainActivity extends AppCompatActivity {
                     textView1.setText(String.valueOf(firstNumber));
                     operatorPressed = false;
                     equalsPressed = true;
+                    afterNumber=false;
+                    decimalUsed = false;
                 }
                 else{
-
+                    textView1.setText("0");
                 }
             }
         });
