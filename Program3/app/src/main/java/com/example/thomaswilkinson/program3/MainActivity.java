@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         buttonPowerOf = findViewById(R.id.buttonPowerOf);
         buttonEquals = findViewById(R.id.buttonEquals);
         textView1 = findViewById(R.id.textView);
-        textView1.setSelected(true);
+
         //Button 0 listener
         button0.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -359,32 +359,35 @@ public class MainActivity extends AppCompatActivity {
         buttonDecimal.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                if(equalsPressed) {
-                    textView1.setText(".");
-                    equalsPressed = false;
-                }
-                else{
-                    if(addPressed||subtractPressed||multiplyPressed||dividePressed||powerOfPressed) {
-                        if(afterNumber) {
-                            String currentText = textView1.getText().toString().trim();
-                            textView1.setText(currentText + ".");
-                            decimalUsed = true;
+                if(!decimalUsed){
+                    if(equalsPressed) {
+                        textView1.setText(".");
+                        equalsPressed = false;
+                        decimalUsed = true;
+                    }
+                    else{
+                        if(addPressed||subtractPressed||multiplyPressed||dividePressed||powerOfPressed) {
+                            if(afterNumber) {
+                                String currentText = textView1.getText().toString().trim();
+                                textView1.setText(currentText + ".");
+                                decimalUsed = true;
+                            }
+                            else {
+                                textView1.setText(".");
+                                operatorPressed = true;
+                                afterNumber = true;
+                                decimalUsed = true;
+                            }
                         }
                         else {
-                            textView1.setText(".");
-                            operatorPressed = true;
-                            afterNumber = true;
-                            decimalUsed = true;
-                        }
-                    }
-                    else {
-                        if (textView1.getText().toString().trim().equals("0")) {
-                            textView1.setText(".");
-                            decimalUsed = true;
-                        } else {
-                            String currentText = textView1.getText().toString().trim();
-                            textView1.setText(currentText + ".");
-                            decimalUsed = true;
+                            if (textView1.getText().toString().trim().equals("0")) {
+                                textView1.setText(".");
+                                decimalUsed = true;
+                            } else {
+                                String currentText = textView1.getText().toString().trim();
+                                textView1.setText(currentText + ".");
+                                decimalUsed = true;
+                            }
                         }
                     }
                 }
@@ -657,7 +660,6 @@ public class MainActivity extends AppCompatActivity {
         buttonNegate.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                Boolean negated;
                 String currentText = textView1.getText().toString().trim();
                 if(!(currentText.charAt(0)=='-'))
                 {
@@ -665,11 +667,10 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else{
                     textView1.setText(currentText.substring(1));
-                    negated = false;
                 }
             }
         });
-        //buttonNegate listener
+        //buttonEquals listener
         buttonEquals.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
