@@ -46,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
         buttonPowerOf = findViewById(R.id.buttonPowerOf);
         buttonEquals = findViewById(R.id.buttonEquals);
         textView1 = findViewById(R.id.textView);
+        textView1.setSelected(true);
         //Button 0 listener
         button0.setOnClickListener(new View.OnClickListener(){
             @Override
