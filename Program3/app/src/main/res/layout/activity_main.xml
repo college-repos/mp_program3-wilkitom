@@ -153,17 +153,22 @@
 
 
 
-    <TextView
+    <EditText
         android:singleLine="true"
         android:id="@+id/textView"
         android:layout_width="275dp"
-        android:layout_height="80dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
-        android:gravity="right"
+        android:gravity="left"
         android:text="0"
         android:textSize="50sp"
+        android:inputType="none"
+        android:clickable="false"
+        android:cursorVisible="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
     />
 
 
